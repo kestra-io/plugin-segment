@@ -1,4 +1,4 @@
-package io.kestra.plugin.segment.reverseETL;
+package io.kestra.plugin.segment.reverseetl;
 
 import io.kestra.core.exceptions.IllegalVariableEvaluationException;
 import io.kestra.core.http.client.HttpClientException;
@@ -8,8 +8,8 @@ import io.kestra.core.models.property.Property;
 import io.kestra.core.models.tasks.RunnableTask;
 import io.kestra.core.runners.RunContext;
 import io.kestra.plugin.segment.AbstractSegmentConnection;
-import io.kestra.plugin.segment.reverseETL.models.ReverseEtlSyncStatus;
-import io.kestra.plugin.segment.reverseETL.models.ReverseEtlSyncStatusResponse;
+import io.kestra.plugin.segment.reverseetl.models.ReverseEtlSyncStatus;
+import io.kestra.plugin.segment.reverseetl.models.ReverseEtlSyncStatusResponse;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
@@ -33,7 +33,7 @@ import java.io.IOException;
 
                 tasks:
                   - id: get_sync_status
-                    type: io.kestra.plugin.segment.reverseETL.Status
+                    type: io.kestra.plugin.segment.reverseetl.Status
                     token: "{{ secret('SEGMENT_TOKEN') }}"
                     modelId: model_id
                     syncId: sync_id

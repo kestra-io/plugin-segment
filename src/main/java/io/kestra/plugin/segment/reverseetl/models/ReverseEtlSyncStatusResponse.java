@@ -1,4 +1,4 @@
-package io.kestra.plugin.segment.reverseETL.models;
+package io.kestra.plugin.segment.reverseetl.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;

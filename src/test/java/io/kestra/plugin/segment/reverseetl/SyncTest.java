@@ -1,4 +1,4 @@
-package io.kestra.plugin.segment.reverseETL;
+package io.kestra.plugin.segment.reverseetl;
 
 import com.github.tomakehurst.wiremock.junit5.WireMockRuntimeInfo;
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;

@@ -1,4 +1,4 @@
-package io.kestra.plugin.segment.reverseETL;
+package io.kestra.plugin.segment.reverseetl;
 
 import com.github.tomakehurst.wiremock.junit5.WireMockRuntimeInfo;
 import com.github.tomakehurst.wiremock.junit5.WireMockTest;
@@ -6,7 +6,7 @@ import io.kestra.core.junit.annotations.KestraTest;
 import io.kestra.core.models.property.Property;
 import io.kestra.core.runners.RunContext;
 import io.kestra.core.runners.RunContextFactory;
-import io.kestra.plugin.segment.reverseETL.models.ReverseEtlSyncStatus;
+import io.kestra.plugin.segment.reverseetl.models.ReverseEtlSyncStatus;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 

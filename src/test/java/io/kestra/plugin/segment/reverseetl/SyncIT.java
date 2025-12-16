@@ -1,4 +1,4 @@
-package io.kestra.plugin.segment.reverseETL;
+package io.kestra.plugin.segment.reverseetl;
 
 import io.kestra.core.junit.annotations.KestraTest;
 import io.kestra.core.models.property.Property;

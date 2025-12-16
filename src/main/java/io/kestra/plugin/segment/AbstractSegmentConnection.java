@@ -32,9 +32,7 @@ public abstract class AbstractSegmentConnection extends Task {
     @NotNull
     protected Property<String> token;
 
-    @Schema(
-        hidden = true
-    )
+    @Schema(title = "Segment API URL")
     @Builder.Default
     protected Property<String> uri = Property.ofValue(BASE_URL);
 
