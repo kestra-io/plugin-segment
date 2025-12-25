@@ -1,4 +1,4 @@
-package io.kestra.plugin.twilio.core;
+package io.kestra.plugin.twilio.notify;
 
 
 import com.google.common.io.Files;

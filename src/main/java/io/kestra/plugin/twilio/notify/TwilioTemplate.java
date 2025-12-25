@@ -1,4 +1,4 @@
-package io.kestra.plugin.twilio.core;
+package io.kestra.plugin.twilio.notify;
 
 import io.kestra.core.models.property.Property;
 import io.kestra.core.models.tasks.VoidOutput;

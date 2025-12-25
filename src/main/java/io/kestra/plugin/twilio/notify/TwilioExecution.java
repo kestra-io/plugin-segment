@@ -1,4 +1,4 @@
-package io.kestra.plugin.twilio.core;
+package io.kestra.plugin.twilio.notify;
 
 import io.kestra.core.models.annotations.Example;
 import io.kestra.core.models.annotations.Plugin;
@@ -21,7 +21,7 @@ import java.util.Map;
 @Schema(
     title = "Send a Twilio message with the execution information.",
     description = "The message will include a link to the execution page in the UI along with the execution ID, namespace, flow name, the start date, duration, and the final status of the execution. If failed, then task that led to the failure is specified.\n\n" +
-        "Use this notification task only in a flow that has a [Flow trigger](https://kestra.io/docs/administrator-guide/monitoring#alerting). Don't use this notification task in `errors` tasks. Instead, for `errors` tasks, use the [TwilioAlert](https://kestra.io/plugins/plugin-twilio/tasks/core/io.kestra.plugin.twilio.core.twilioalert) task."
+        "Use this notification task only in a flow that has a [Flow trigger](https://kestra.io/docs/administrator-guide/monitoring#alerting). Don't use this notification task in `errors` tasks. Instead, for `errors` tasks, use the [TwilioAlert](https://kestra.io/plugins/plugin-twilio/tasks/notify/io.kestra.plugin.twilio.notify.twilioalert) task."
 )
 @Plugin(
     examples = {
@@ -34,7 +34,7 @@ import java.util.Map;
 
                 tasks:
                   - id: send_alert
-                    type: io.kestra.plugin.twilio.core.TwilioExecution
+                    type: io.kestra.plugin.twilio.notify.TwilioExecution
                     url: "{{ secret('TWILIO_NOTIFICATION_URL') }}" # format: https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications
                     accountSID: "{{ secret('TWILIO_ACCOUNT_SID') }}"
                     authToken: "{{ secret('TWILIO_AUTH_TOKEN') }}"

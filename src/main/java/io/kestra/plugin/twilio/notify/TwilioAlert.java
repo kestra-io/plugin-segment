@@ -1,4 +1,4 @@
-package io.kestra.plugin.twilio.core;
+package io.kestra.plugin.twilio.notify;
 
 import io.kestra.core.http.HttpRequest;
 import io.kestra.core.http.HttpResponse;
@@ -50,7 +50,7 @@ import java.util.Base64;
 
                 errors:
                   - id: alert_on_failure
-                    type: io.kestra.plugin.twilio.core.TwilioAlert
+                    type: io.kestra.plugin.twilio.notify.TwilioAlert
                     url: "{{ secret('TWILIO_NOTIFICATION_URL') }}" # https://notify.twilio.com/v1/Services/ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Notifications
                     accountSID: "{{ secret('TWILIO_ACCOUNT_SID') }}"
                     authToken: "{{ secret('TWILIO_AUTH_TOKEN') }}"
@@ -69,7 +69,7 @@ import java.util.Base64;
 
                 tasks:
                   - id: send_twilio_message
-                    type: io.kestra.plugin.twilio.core.TwilioAlert
+                    type: io.kestra.plugin.twilio.notify.TwilioAlert
                     url: "{{ secret('TWILIO_NOTIFICATION_URL') }}"
                     accountSID: "{{ secret('TWILIO_ACCOUNT_SID') }}"
                     authToken: "{{ secret('TWILIO_AUTH_TOKEN') }}"

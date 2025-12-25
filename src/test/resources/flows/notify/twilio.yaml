@@ -8,7 +8,7 @@ inputs:
 
 tasks:
   - id: twilio
-    type: io.kestra.plugin.twilio.core.TwilioExecution
+    type: io.kestra.plugin.twilio.notify.TwilioExecution
     url: "{{ inputs.url }}/webhook-unit-test"
     identity: "0000001"
     accountSID: "0000000"

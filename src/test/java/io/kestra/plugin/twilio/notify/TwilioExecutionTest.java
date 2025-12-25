@@ -1,4 +1,4 @@
-package io.kestra.plugin.twilio.core;
+package io.kestra.plugin.twilio.notify;
 
 import io.kestra.core.junit.annotations.KestraTest;
 import io.kestra.core.repositories.LocalFlowRepositoryLoader;
@@ -30,7 +30,7 @@ public class TwilioExecutionTest extends AbstractTwilioTest {
     @BeforeEach
     protected void init() throws IOException, URISyntaxException {
         repositoryLoader.load(Objects.requireNonNull(TwilioExecutionTest.class.getClassLoader().getResource("flows/common")));
-        repositoryLoader.load(Objects.requireNonNull(TwilioExecutionTest.class.getClassLoader().getResource("flows/core")));
+        repositoryLoader.load(Objects.requireNonNull(TwilioExecutionTest.class.getClassLoader().getResource("flows/notify")));
         this.runner.run();
     }
 
